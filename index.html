@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<link rel="stylesheet" href="./stylesheet.css">
+
+<body>
+    <div class="back">
+        <div class="sign">
+            <div class="comp">
+                <h1>LueurTech Software Solutions</h1>
+            </div>
+
+            <div class="form1">
+                <form onsubmit="return myFunction(),myFunction1">
+                    <strong><label for="fname">First Name </label></br></strong>
+                    <input type="text" name="fname" id="fname"></br>
+
+                    <strong><label for="lname">Last Name </label></br></strong>
+                    <input type="text" name="lname" id="lname"></br>
+
+                    <strong><label for="email">Email-Id </label></br></strong>
+                    <input type="email" name="mail" id="mail"></br>
+
+                    <strong><label for="uname">Username </label></br></strong>
+                    <input type="text" name="uname" id="uname"></br>
+
+                    <strong><label for="pass">Password </label></br></strong>
+                    <input type="password" name="pass" id="pass" pattern=".{8,}"  required title="Minimum 8 characters required" ></br></br>
+
+                    <p><span><input type="checkbox" style="font-weight : bold;"></span>Remember my password </br></br>
+                    </p>
+                    <input type="submit" name="submit" value="Sign Up" class="Submit" />
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var f = document.getElementById("fname");
+            var l = document.getElementById("lname");
+            var m = document.getElementById("mail");
+            var u = document.getElementById("uname");
+            var p = document.getElementById("pass");
+
+            if (f.value == "") {
+                alert("First Name have to be filled");
+                f.focus();
+                return false;
+            }
+            if (l.value == "") {
+                alert("Last name have to be filled");
+                l.focus();
+                return false;
+            }
+            if (m.value == "") {
+                alert("Email-Id have to be filled");
+                m.focus();
+                return false;
+            }
+            if (u.value == "") {
+                alert("Username have to be filled");
+                u.focus();
+                return false;
+            }
+            if (p.value == "") {
+                alert("Password have to be filled");
+                p.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
